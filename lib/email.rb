@@ -14,7 +14,7 @@ def initialize(user = 1)
   end
 
   def retrieve_posts
-    user_data = @db.get_user_posts(@user)
+    @user_data = @db.get_user_posts(@user)
   end
 
   def body(data)
@@ -34,7 +34,7 @@ def initialize(user = 1)
   end
 
   def recipient_email
-    retrieve_posts['email_address']
+    @user_data['email_address']
   end
 
   def run_mailer
@@ -58,8 +58,8 @@ def initialize(user = 1)
 
 end
 
-mail = Email.new
-mail.run_mailer
+# mail = Email.new
+# mail.run_mailer
 
 # mail = Email.new
 # mail.send_mail([[3376352490, "*** 2010 TOYOTA TUNDRA DOUBLE CAB TRUCK GOOD *** - $6210", "", " (stockton)", " <<cars & trucks - by dealer", " Oct 30", nil, 1, 3376352490], [3376439125, "*** 2010 TOYOTA TUNDRA DOUBLE CAB TRUCK GARAGE KEPT ***", " $6232", " (SF bay area)", " cars & trucks - by dealer", " Oct 30", nil, 1, 3376439125]], "timed email")

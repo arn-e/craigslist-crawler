@@ -54,11 +54,12 @@ class Interface
 
   def new_query
     get_username
-    get_email
+    # get_email
     get_content
     get_min_price
     get_max_price
     get_picture_field
+    puts "hi"
     @user_input
   end
 
