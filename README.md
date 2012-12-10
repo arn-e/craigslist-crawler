@@ -1,3 +1,8 @@
-# Craigslist Scraper
+# Craigslist Crawler
 
-*Replace this file with your own README.  At minimum, you should cover installation and basic usage instructions.*
+CLI Craiglist scraper designed to allow users to easily search craigslist for items, and to keep track  
+of new items which match a given search criteria.
+
+## TBD :
+
+* add automated re-searching via chron job
